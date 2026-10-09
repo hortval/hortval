@@ -5,6 +5,32 @@ title: Changelog
 
 # Changelog
 
+## v0.9.5.1 - 2026-10-09
+
+*A security patch on v0.9.5.*
+
+It carries the Go toolchain and nothing else — no feature, no schema change, no
+configuration change. Upgrading from v0.9.5 is a binary replacement and a
+restart; rolling back is the same gesture in reverse.
+
+### Security
+
+Built with the **Go 1.26.9 toolchain**, which closes advisories in the HTTP/2 and
+TLS paths of the standard library. Those are paths Hortval serves on — HTTP/2 is
+negotiated on the ACME listener — and paths it calls out on, in the HTTP clients
+it uses to reach an authority or to refresh a license. **Remote, unauthenticated
+denial of service.** No data exposure and no authentication bypass. Details of
+the underlying mechanisms are deliberately omitted while deployments upgrade.
+
+The toolchain a binary was built with is readable from the artefact itself:
+`go version hortval-v0.9.5.1-<os>-<arch>`.
+
+### Upgrading from v0.9.5
+
+Replace the binary and restart. The configuration, the database schema and the
+installed license are untouched, so there is nothing to plan beyond the restart
+itself.
+
 ## v0.9.5 - 2026-08-22
 
 **The first Hortval release.** One idea runs through it: the server no longer
