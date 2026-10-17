@@ -1,4 +1,4 @@
-# Hortval
+# Hortval ACME for ADCS
 
 Hortval is an ACME connector for Microsoft ADCS that enables automated internal certificate issuance using your existing PKI.
 
