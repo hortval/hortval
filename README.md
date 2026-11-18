@@ -11,6 +11,8 @@
   - **100% on-premise**: nothing leaves your network, can run air-gapped
   - **Free up to 25 servers**
 
+Formerly known as Certeasy: same product, new name.
+
 ## 🌐 Website
 
 👉 https://hortval.com
