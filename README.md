@@ -1,6 +1,15 @@
-# Hortval ACME for ADCS
-
-Hortval is an ACME connector for Microsoft ADCS that enables automated internal certificate issuance using your existing PKI.
+ # Hortval: ACME server for Microsoft ADCS
+  
+  Hortval turns your existing Microsoft ADCS (Active Directory Certificate Services)
+  into an ACME server (RFC 8555). Linux servers, reverse proxies, containers and
+  appliances can then request and renew internal certificates automatically, the
+  same way Windows machines already do through Group Policy.
+  
+  - **Works with any ACME client**: certbot, acme.sh, lego, Caddy, Posh-ACME
+  - **Challenges**: HTTP-01, DNS-01, TLS-ALPN-01
+  - **Uses your PKI as it is**: your CA, your certificate templates, your policies
+  - **100% on-premise**: nothing leaves your network, can run air-gapped
+  - **Free up to 25 servers**
 
 ## 🌐 Website
 
